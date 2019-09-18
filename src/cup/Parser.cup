@@ -1,0 +1,21 @@
+
+import java_cup.runtime.*;
+
+terminal PLUS, MINUS, EQUALS, MULTIPLY, LPAREN, RPAREN;
+terminal Integer NUM;
+
+non terminal Equation S;
+non terminal Expression E;
+
+precedence left PLUS, MINUS;
+precedence left MULTIPLY;
+
+S   ::= E:e EQUALS          {: RESULT = new Equation(e); :}
+    ;
+
+E   ::= E:e1 PLUS E:e2      {: RESULT = new Expression(e1.getValue() + e2.getValue()); :}
+    |   E:e1 MINUS E:e2     {: RESULT = new Expression(e1.getValue() - e2.getValue()); :}
+    |   E:e1 MULTIPLY E:e2  {: RESULT = new Expression(e1.getValue() * e2.getValue()); :}
+    |   LPAREN E:e RPAREN   {: RESULT = new Expression(e.getValue()); :}
+    |   NUM:n               {: RESULT = new Expression(n); :}
+    ;
