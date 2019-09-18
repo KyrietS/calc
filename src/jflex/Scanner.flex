@@ -31,6 +31,8 @@ import java_cup.runtime.ComplexSymbolFactory.Location;
      return symbolFactory.newSymbol("EOF", EOF, new Location(yyline+1,yycolumn+1,yychar), new Location(yyline+1,yycolumn+1,yychar+1));
 %eofval}
 
+NEW_LINE = \n|\r\n;
+
 %%
 
 [1-9][0-9]*             { return symbol("number", NUM, Integer.parseInt(yytext())); }
@@ -41,4 +43,5 @@ import java_cup.runtime.ComplexSymbolFactory.Location;
 ")"                     { return symbol(")", RPAREN); }
 "="                     { return symbol("=", EQUALS); }
 [ \t]                   { /* ignore */ }
+{NEW_LINE}              { /* ignore */ }
 .                       { throw new RuntimeException("Unexpected character [" + yytext() + "]"); }
