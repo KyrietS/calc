@@ -7,10 +7,11 @@ Kalkulator rozwiązuje równanie z pliku podanego jako pierwszy argument wywoła
 * [JFlex](https://jflex.de/)
 * [CUP](http://www2.cs.tum.edu/projects/cup/)
 * [Kotlin Command Line Compiler](https://kotlinlang.org/docs/tutorials/command-line.html)
+* JDK
 
-Z powodu tego, że określone wersje **Jflex'a** współpracują tylko z określonymi wesjami **CUP'a** oba programy zostały dołączone do projektu (katalog `build`)i przystosowane do działania razem. Można je ręcznie uruchomić poprzez dołączone skrypty `jflex` i `cup`.
+Z powodu tego, że określone wersje **Jflex'a** współpracują tylko z określonymi wesjami **CUP'a** oba programy zostały dołączone do projektu (katalog `build`) i przystosowane do działania razem. Można je ręcznie uruchomić poprzez dołączone skrypty `jflex` oraz `cup`.
 
-## Przykładowa instalacja niezbędnych kompontentów w celu skompilowania projektu na Ubuntu
+## Przykładowa instalacja JDK i Kotlina w celu skompilowania projektu na Ubuntu
 ```
 sudo apt update
 sudo apt install default-jdk
