@@ -29,10 +29,11 @@ java: kotlin
 # Uruchomienie skompilowanych źródeł (wymaga wcześniejszego skompilowania)
 run:
 	@echo "**************** RUN ****************"
-	java -cp "lib/kotlin-stdlib.jar:lib/java-cup-11b-runtime.jar:bin/" CalcKt
+	java -cp "lib/kotlin-stdlib.jar:lib/java-cup-11b-runtime.jar:bin/" MainKt
 
 # Czyszczenie projektu
 clean:
 	@echo "**************** CLEAN ****************"
-	-rm -R bin/*
-	-rm -R src/java/*
+	rm -Rf bin/*
+	rm -Rf src/java/*
+	rm -Rf out/

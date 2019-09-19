@@ -1,8 +1,5 @@
 # Pliki binarne generowane przez kompilator Javy i Kotlina
 bin/*
 
-# Pliki źródłowe Javy generowane przez JFlex'a i CUP'a
-src/java/*
-
 # IntelliJ
 out/
