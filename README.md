@@ -22,7 +22,7 @@ sudo snap install --classic kotlin
 
 ```
 make build
-./calc.sh test.in
+./run.sh test.in
 ```
 
 ## Wygenerowanie JAR i dodatkowe zależności
